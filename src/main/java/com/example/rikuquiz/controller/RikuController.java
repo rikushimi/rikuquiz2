@@ -43,23 +43,39 @@ public class RikuController {
         return"riku/show";
     }
 
+    @GetMapping("hair")
+    public String hair(Model model){
+
+        return"riku/hair";
+    }
+
+    @GetMapping("actress")
+    public String actress(Model model) {
+          return"riku/actress";
+    }
+
+
+    @GetMapping("love")
+    public String love(Model model) {
+
+        return "riku/love";
+    }
+
     @PostMapping
     public String create(@ModelAttribute Riku riku){
         rikuService.save(riku);
-        return "redirect:/riku";
+        return "riku/rikuquiz";
     }
 
-    @GetMapping("{id}/happy")
-    public String happy(@PathVariable Long id, Model model){
-        Riku riku = rikuService.findOne(id);
-        model.addAttribute("riku", riku);
+    @GetMapping("happy")
+    public String happy(Model model){
+
         return "riku/happy";
     }
 
-    @GetMapping("{id}/bad")
-    public String bad(@PathVariable Long id, Model model){
-        Riku riku = rikuService.findOne(id);
-        model.addAttribute("riku",riku);
+    @GetMapping("bad")
+    public String bad(Model model){
+
         return "riku/bad";
     }
 
