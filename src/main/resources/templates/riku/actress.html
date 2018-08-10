@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="utf-8" />
-    <title>Bad</title>
+    <title>Q2</title>
     <link rel="stylesheet" href="/css/bootstrap.css" />
     <script src="/js/jquery.js"></script>
     <script src="/js/bootstrap.js"></script>
@@ -10,17 +10,19 @@
 <body>
 <div class="container">
     <div class="row">
-        <h1>Bad</h1>
-        <div th:object="${riku}" >
-            <div >
+        <h1>Q1</h1>
+        <div th:object="${riku}">
+            <div>
 
 
-                <p>Rikuは......</p>
-                <img src="/style/riku_bad1.jpg">
+                <p>Rikuの好きな芸能人は？</p>
 
             </div>
             <!-- button -->
-
+            <div>
+                <a class="btn btn-primary" th:href="@{/riku/love}">A.小松奈々</a>
+                <a class="btn btn-primary" th:href="@{/riku/bad}">B.鈴木奈々</a>
+            </div>
 
         </div>
 
